@@ -1,2 +1,2 @@
-# prog1-equipo-ramallo
-Repositorio del equipo Ramallo
+# prog1-equipo-stockmanager
+Repositorio del equipo stockmanager
