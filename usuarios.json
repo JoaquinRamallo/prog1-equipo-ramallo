@@ -1,0 +1,32 @@
+{
+    "joacoramallo@gmail.com": {
+        "nombre": "ALEJO",
+        "password": "123",
+        "saldo": 0
+    },
+    "ramajoaco7@gmail.com": {
+        "nombre": "ALEJO",
+        "password": "123",
+        "saldo": 241550.0
+    },
+    "racing@gmail.com": {
+        "nombre": "Profesor",
+        "password": "1234",
+        "saldo": 5806992.0
+    },
+    "usuario@gmail.com": {
+        "nombre": "PRUEBA",
+        "password": "1234",
+        "saldo": 0
+    },
+    "joaco@gmail.com": {
+        "nombre": "Joaco",
+        "password": "River233.",
+        "saldo": 80000.0
+    },
+    "marcosrojo@gmail.com": {
+        "nombre": "Marcos Rojo",
+        "password": "Racing.",
+        "saldo": 0.0
+    }
+}
