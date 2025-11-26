@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Gasto</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="{{ url_for('inicio') }}" class="logo">
+            <img src="{{ url_for('static', filename='img/myfinance.jpg') }}" alt="Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('inicio') }}" class="nav-button">Inicio</a></li>
+            <li><a href="{{ url_for('pagar') }}" class="nav-button active">Registrar Gasto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="form-wrapper">
+    <div class="form-card">
+
+        <h2 class="form-title">Registrar Gasto</h2>
+
+        <p class="form-user">
+            <strong>Usuario:</strong> {{ usuario }} |
+            <strong>Saldo actual:</strong> ${{ saldo }}
+        </p>
+
+        {% if error %}
+        <div style="
+            background-color: #dc3545;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            font-weight: bold;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form action="{{ url_for('pagar') }}" method="POST">
+
+            <label>Gasto / Descripción</label>
+            <input type="text" name="descripcion" placeholder="Ej: Cuota del gym" required>
+
+            <label>Monto gastado</label>
+            <input type="number" name="monto" placeholder="Monto" required>
+
+            <button class="btn-primary">Registrar</button>
+        </form>
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+
+    <link rel="stylesheet" href="static/css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('inicio') }}" class="logo">
+                <img src="static/img/myfinance.jpg" alt="Logo de My Finance">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('inicio') }}" class="nav-button">Inicio</a></li>
+                <li><a href="{{ url_for('movimientos') }}" class="nav-button">Movimientos</a></li>
+                <li><a href="{{ url_for('inversiones') }}" class="nav-button">Inversiones</a></li>
+                <li><a href="{{ url_for('perfil') }}" class="nav-button active">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="profile-card section-card">
+
+            <div class="profile-avatar">
+                <img src="static/img/user.png" width="120px" alt="Usuario">
+            </div>
+
+            <h2 class="profile-name">{{ datos.get("nombre", "Usuario") }}</h2>
+            <p class="profile-id">ID: {{ datos.get("id", "N/A") }}</p>
+
+            <hr class="divider">
+
+            <div class="profile-info">
+
+                <div class="info-block">
+                    <h4 class="info-label">Correo electrónico</h4>
+                    <p class="info-text">{{ email }}</p>
+                </div>
+
+                <div class="info-block">
+                    <h4 class="info-label">Teléfono</h4>
+                    <p class="info-text">{{ datos.get("telefono", "No cargado") }}</p>
+                </div>
+
+                <div class="info-block">
+                    <h4 class="info-label">Dirección</h4>
+                    <p class="info-text">{{ datos.get("direccion", "No cargado") }}</p>
+                </div>
+
+            </div>
+
+           
+            <a href="{{ url_for('cerrar_sesion') }}" class="logout-button">Cerrar Sesión</a>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Finanzas App. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

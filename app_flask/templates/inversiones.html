@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones</title>
+
+    <link rel="stylesheet" href="static/css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('inicio') }}" class="logo">
+                <img src="static/img/myfinance.jpg" alt="Logo de My Finance">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('inicio') }}" class="nav-button">Inicio</a></li>
+                <li><a href="{{ url_for('movimientos') }}" class="nav-button">Movimientos</a></li>
+                <li><a href="{{ url_for('inversiones') }}" class="nav-button active">Inversiones</a></li>
+                <li><a href="{{ url_for('perfil') }}" class="nav-button">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        {% if error %}
+        <div style="
+            background-color: #dc3545;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            font-weight: bold;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <section class="investment-card section-card">
+            <h2 class="section-title">Invierte tu dinero</h2>
+            <p class="section-subtitle">Elige un monto para invertir y selecciona una de las opciones.</p>
+
+            <form class="investment-form" method="POST" action="{{ url_for('inversiones') }}">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="monto">Monto a invertir</label>
+                        <input 
+                            type="number" 
+                            step="0.01" 
+                            id="monto" 
+                            name="monto" 
+                            placeholder="Ingresa un monto" 
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Selecciona una opción</label>
+                        <select id="tipo" name="tipo">
+                            <option value="Fondos Comunes">Fondos Comunes</option>
+                            <option value="Acciones">Acciones</option>
+                            <option value="Bonos">Bonos</option>
+                            <option value="Plazo Fijo">Plazo Fijo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-button">Continuar</button>
+            </form>
+        </section>
+
+        <section class="services-intro">
+            <h2 class="section-title">Tu Resumen de Inversiones</h2>
+            <p class="intro-text">Observa el rendimiento de tus activos.</p>
+        </section>
+
+        <section class="services-grid">
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="static/img/fondos.jpg" width="75px" alt="Fondos Comunes">
+                </div>
+                <h3 class="service-title">Fondos Comunes</h3>
+                <p class="service-description">Total invertido: ${{ totales["Fondos Comunes"] }}</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="static/img/profits.png" width="40px" alt="Acciones">
+                </div>
+                <h3 class="service-title">Acciones</h3>
+                <p class="service-description">Total invertido: ${{ totales["Acciones"] }}</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="static/img/bonos.jpg" width="60px" alt="Bonos">
+                </div>
+                <h3 class="service-title">Bonos</h3>
+                <p class="service-description">Total invertido: ${{ totales["Bonos"] }}</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="static/img/plazo.png" width="50px" alt="Plazo Fijo">
+                </div>
+                <h3 class="service-title">Plazo Fijo</h3>
+                <p class="service-description">Total invertido: ${{ totales["Plazo Fijo"] }}</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Finanzas App. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

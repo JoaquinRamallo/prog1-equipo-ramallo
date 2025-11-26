@@ -1,0 +1,164 @@
+{
+    "ramajoaco7@gmail.com": [
+        {
+            "fecha": "2025-11-13T21:25:04.556429",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -15000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:22:58.676742",
+            "descripcion": "Ingreso: sueldo",
+            "monto": 320000.0,
+            "tipo": "ingreso"
+        },
+        {
+            "fecha": "2025-11-13T21:22:43.756201",
+            "descripcion": "gym",
+            "monto": -150000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:20:54.687525",
+            "descripcion": "Verduleria",
+            "monto": -13450.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:20:45.424348",
+            "descripcion": "Ingreso: pago adelantado",
+            "monto": 100000.0,
+            "tipo": "ingreso"
+        },
+        {
+            "fecha": "2025-11-13T21:21:08.232434",
+            "descripcion": "Inversión en Plazo Fijo",
+            "monto": -20000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:21:21.284807",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -1000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:21:25.953974",
+            "descripcion": "Inversión en Acciones",
+            "monto": -2342.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:21:33.991885",
+            "descripcion": "Inversión en Bonos",
+            "monto": -15000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:21:38.057870",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -100000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:23:11.192761",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -20000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:23:26.001783",
+            "descripcion": "Inversión en Bonos",
+            "monto": -256550.0,
+            "tipo": "gasto"
+        }
+    ],
+    "racing@gmail.com": [
+        {
+            "fecha": "2025-11-13T21:28:17.063369",
+            "descripcion": "patente del auto",
+            "monto": -150000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:28:05.243065",
+            "descripcion": "verduleria",
+            "monto": -43008.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:27:42.022596",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -6000000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-13T21:27:23.575182",
+            "descripcion": "Ingreso: suedo uade",
+            "monto": 12000000.0,
+            "tipo": "ingreso"
+        }
+    ],
+    "joaco@gmail.com": [
+        {
+            "fecha": "2025-11-14T12:03:26.063954",
+            "descripcion": "Inversión en Acciones",
+            "monto": -70000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:03:18.941747",
+            "descripcion": "Inversión en Fondos Comunes",
+            "monto": -150000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:03:12.361042",
+            "descripcion": "Wifi",
+            "monto": -50000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:02:59.456056",
+            "descripcion": "Cuota del celular",
+            "monto": -60000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:02:44.145584",
+            "descripcion": "Inversión en Plazo Fijo",
+            "monto": -150000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:02:30.162791",
+            "descripcion": "Departamento (expensas)",
+            "monto": -100000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:02:12.913565",
+            "descripcion": "Supermercado",
+            "monto": -100000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:01:59.403550",
+            "descripcion": "Verduleria",
+            "monto": -40000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:01:42.867096",
+            "descripcion": "Cuota del gym",
+            "monto": -50000.0,
+            "tipo": "gasto"
+        },
+        {
+            "fecha": "2025-11-14T12:01:31.356142",
+            "descripcion": "Ingreso: Sueldo ",
+            "monto": 850000.0,
+            "tipo": "ingreso"
+        }
+    ]
+}

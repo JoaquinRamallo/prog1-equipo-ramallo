@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="header">
+    <nav class="navbar">
+        <a href="{{ url_for('inicio') }}" class="logo">
+            <img src="{{ url_for('static', filename='img/myfinance.jpg') }}" alt="Logo de My Finance">
+        </a>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('inicio') }}" class="nav-button">Inicio</a></li>
+            <li><a href="{{ url_for('movimientos') }}" class="nav-button">Movimientos</a></li>
+            <li><a href="{{ url_for('inversiones') }}" class="nav-button">Inversiones</a></li>
+            <li><a href="{{ url_for('perfil') }}" class="nav-button active">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="section-card">
+        <h2 class="page-title">Cambiar Contraseña</h2>
+        <p class="section-description">Mantén tu cuenta segura actualizando tu contraseña.</p>
+
+        <form class="action-form" method="POST" action="#">
+            <div class="form-group">
+                <label for="current_password">Contraseña Actual</label>
+                <input type="password" id="current_password" name="current_password" placeholder="Ingresa tu contraseña actual" required>
+            </div>
+
+            <div class="form-group">
+                <label for="new_password">Nueva Contraseña</label>
+                <input type="password" id="new_password" name="new_password" placeholder="Ingresa tu nueva contraseña" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Confirmar Nueva Contraseña</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirma tu nueva contraseña" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Cambiar Contraseña</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Finanzas App. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

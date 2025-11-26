@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+
+    <link rel="stylesheet" href="static/css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="login-container">
+        <section class="login-card">
+            <h2 class="page-title">Recuperar Contraseña</h2>
+            <p class="section-description">Ingresa tu correo para recibir un enlace de recuperación.</p>
+
+    
+            <form class="action-form" method="POST" action="{{ url_for('procesar_olvide_contra') }}">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu-correo@ejemplo.com" required>
+                </div>
+                <button type="submit" class="submit-btn">Enviar enlace</button>
+            </form>
+
+            
+            {% if mensaje %}
+                <p style="color: green; text-align: center; margin-top: 1rem;">{{ mensaje }}</p>
+            {% elif error %}
+                <p style="color: red; text-align: center; margin-top: 1rem;">{{ error }}</p>
+            {% endif %}
+
+            <p class="signup-link">
+                <a href="{{ url_for('login') }}">Volver a Iniciar Sesión</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('inicio') }}" class="logo">
+                <img src="{{ url_for('static', filename='img/myfinance.jpg') }}" alt="Logo de My Finance">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('inicio') }}" class="nav-button active">Inicio</a></li>
+                <li><a href="{{ url_for('movimientos') }}" class="nav-button">Movimientos</a></li>
+                <li><a href="{{ url_for('inversiones') }}" class="nav-button">Inversiones</a></li>
+                <li><a href="{{ url_for('perfil') }}" class="nav-button">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        {% if error %}
+        <div style="
+            background-color: #dc3545;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            font-weight: bold;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <section class="balance-card">
+            <h2 class="card-title">Saldo Disponible</h2>
+            <p class="balance-amount">$<span id="balance">{{ saldo }}</span></p>
+            <p class="user-name">Bienvenido, <strong>{{ nombre }}</strong></p>
+        </section>
+
+        <section class="quick-actions">
+            <a href="{{ url_for('pagar') }}" class="action-btn"><span>Pagar</span></a>
+            <a href="{{ url_for('ingreso') }}" class="action-btn"><span>Ingresar</span></a>
+        </section>
+
+        <section class="financial-summary">
+            <h2 class="section-title">Resumen Financiero Mensual</h2>
+            <div class="charts-container">
+                <div class="chart-card">
+                    <canvas id="balanceChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Finanzas App. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        const ingresos = Number("{{ ingresos | default(0) }}");
+        const gastos = Number("{{ gastos | default(0) }}");
+
+        const ctx = document.getElementById('balanceChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ingresos', 'Gastos'],
+                datasets: [{
+                    label: 'Resumen financiero',
+                    data: [ingresos, gastos],
+                    backgroundColor: ['#28a745', '#dc3545']
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Ingresos vs. Gastos (Mes actual)',
+                        color: '#02042A'
+                    },
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

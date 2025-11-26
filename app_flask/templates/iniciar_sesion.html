@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Finanzas App</title>
+
+    <link rel="stylesheet" href="static/css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="login-container">
+        <section class="login-card">
+            <div class="logo-container">
+                <img src="static/img/myfinance.jpg" alt="Logo de My Finance" class="login-logo">
+            </div>
+
+            <p class="login-subtitle">Inicia sesión para continuar</p>
+
+           <form class="login-form" method="POST" action="/">
+    <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu-correo@ejemplo.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required>
+    </div>
+
+    <button type="submit" class="login-btn">Acceder</button>
+</form>
+
+
+            {% if mensaje %}
+    <p style="color: green; text-align: center;">{{ mensaje }}</p>
+{% elif error %}
+    <p style="color: red; text-align: center;">{{ error }}</p>
+{% endif %}
+
+
+
+            <p class="signup-link">
+                ¿No tienes cuenta?
+                <a href="{{ url_for('crear_cuenta') }}">Regístrate aquí</a>
+            </p>
+
+            <a href="{{ url_for('olvide_contra')}}" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        </section>
+    </main>
+</body>
+</html>
