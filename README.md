@@ -30,8 +30,6 @@ Estudiante de Desarrollo de Software - UADE
 
 ## 🖼️ Capturas de la aplicación
 
-![Home](images/home.png)
-
-![Registrar movimiento](images/movimiento.png)
-
-![Transacciones](images/transacciones.png)
+![Home](home.png)
+![Registrar movimiento](movimiento.png)
+![Transacciones](transacciones.png)
